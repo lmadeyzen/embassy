@@ -9,13 +9,13 @@ Currently, two official plugins are available:
 
 ## Start
 
-install Node.js
-run `npm install`
+install Node.js\
+run `npm install`\
 run `npm run dev`
 
 ## Styles:
 
-To change colors go to `src/styles/Colors.ts` and replace colors.
+To change colors go to `src/styles/Colors.ts` and replace colors.\
 There is two more colors you can menage in `src/styles/index.css` file. In `body` you can change background-color and font color. Also in this file you can chnage dimensions of all elements changing `font-size` property in `:root` element.
 
 ## Custom labels:
