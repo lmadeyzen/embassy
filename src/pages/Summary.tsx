@@ -10,15 +10,25 @@ import {
 } from "../styles/Components";
 import styled from "styled-components";
 import { useAppSelector } from "../redux/hooks";
-import { useChangeTitle } from "../hooks/useChangeTitle";
 import { useEndMessage } from "../hooks/useEndMessage";
+import { useEffect } from "react";
 
 const { mainHeader, summaryPage, back, finish, title3page } = labels;
 const { formTitle } = summaryPage;
 
 export const Summary = () => {
+  useEffect(() => {
+    window.webviewSdkInit;
+  }, []);
+
+  useEffect(() => {
+    setTimeout(() => {
+      window.WebviewSdk.setTitle(title3page);
+    }, 0);
+  }, []);
+
   const navigate = useNavigate();
-  useChangeTitle(title3page);
+
   const postMessage = useEndMessage();
 
   const { name, surname, age, select2 } = useAppSelector(

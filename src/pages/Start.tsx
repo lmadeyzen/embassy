@@ -21,7 +21,7 @@ interface Option {
   label: string;
 }
 
-const { mainHeader, next, startPage, title1page, title3page } = labels;
+const { mainHeader, next, startPage, title1page } = labels;
 const { selects, inputsPlaceholders, formTitle } = startPage;
 
 export const Start = () => {
@@ -31,7 +31,7 @@ export const Start = () => {
 
   useEffect(() => {
     setTimeout(() => {
-      window.WebviewSdk.setTitle("test 2");
+      window.WebviewSdk.setTitle(title1page);
     }, 0);
   }, []);
 

@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { useChangeTitle } from "../hooks/useChangeTitle";
 import "react-date-range/dist/styles.css"; // main style file
 import { DateRangePicker } from "react-date-range";
 import "react-date-range/dist/theme/default.css"; // theme css file
@@ -36,7 +35,7 @@ export const PickDate = () => {
 
   useEffect(() => {
     setTimeout(() => {
-      window.WebviewSdk.setTitle("test 2");
+      window.WebviewSdk.setTitle(title2page);
     }, 0);
   }, []);
 
