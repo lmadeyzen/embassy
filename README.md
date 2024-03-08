@@ -29,7 +29,9 @@ export default {
 - Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
 - Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
 
+Styles:
 To change colors go to `src/styles/Colors.ts` and replace colors.
+There is two more colors you can menage in `src/styles/index.css` file. In `body` you can change background-color and font color. Also in this file you can chnage dimensions of all elements changing `font-size` property in `:root` element.
 
 If you want to use custom labels go to `src/i18n/lables`. Lables are sorted by page (startPage, pickDate, summaryPage)
 
