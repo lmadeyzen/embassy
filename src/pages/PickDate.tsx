@@ -37,7 +37,7 @@ export const PickDate = () => {
   useEffect(() => {
     setTimeout(() => {
       window.WebviewSdk.setTitle("test 2");
-    });
+    }, 0);
   }, []);
 
   const navigate = useNavigate();

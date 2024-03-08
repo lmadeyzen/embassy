@@ -25,6 +25,16 @@ const { mainHeader, next, startPage, title1page, title3page } = labels;
 const { selects, inputsPlaceholders, formTitle } = startPage;
 
 export const Start = () => {
+  useEffect(() => {
+    window.webviewSdkInit;
+  }, []);
+
+  useEffect(() => {
+    setTimeout(() => {
+      window.WebviewSdk.setTitle("test 2");
+    }, 0);
+  }, []);
+
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
   const [serach] = useSearchParams();
