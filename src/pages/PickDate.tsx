@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useChangeTitle } from "../hooks/useChangeTitle";
 import "react-date-range/dist/styles.css"; // main style file
 import { DateRangePicker } from "react-date-range";
@@ -30,7 +30,16 @@ interface RangesDates {
 const { mainHeader, next, back, pickDatePage, title2page } = labels;
 
 export const PickDate = () => {
-  useChangeTitle(title2page);
+  useEffect(() => {
+    window.webviewSdkInit;
+  }, []);
+
+  useEffect(() => {
+    setTimeout(() => {
+      window.WebviewSdk.setTitle("test 2");
+    });
+  }, []);
+
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
   const { startDate, endDate } = useAppSelector((state) => state.pickDate.date);

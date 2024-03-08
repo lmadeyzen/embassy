@@ -25,8 +25,6 @@ const { mainHeader, next, startPage, title1page, title3page } = labels;
 const { selects, inputsPlaceholders, formTitle } = startPage;
 
 export const Start = () => {
-  window.WebviewSdk.setTitle("test");
-
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
   const [serach] = useSearchParams();
