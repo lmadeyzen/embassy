@@ -1,4 +1,3 @@
-import { useChangeTitle } from "../hooks/useChangeTitle";
 import { useNavigate, useSearchParams } from "react-router-dom";
 import {
   Form,
@@ -26,12 +25,12 @@ const { mainHeader, next, startPage, title1page, title3page } = labels;
 const { selects, inputsPlaceholders, formTitle } = startPage;
 
 export const Start = () => {
-  useChangeTitle(title3page);
+  window.WebviewSdk.setTitle("test");
+
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
   const [serach] = useSearchParams();
   const currentForm = useAppSelector((state) => state.startSlice.dataForm);
-  useChangeTitle(title1page);
   const appId = serach.get("appId") || "";
   const conversationId = serach.get("conversationId") || "";
 
